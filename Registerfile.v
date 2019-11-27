@@ -136,7 +136,7 @@ integer i;
 
 always @(*)
 begin
-for(i=0;i<31;i++)
+for(i=0;i<=31;i++)
 BitWiseArray[i] = {in31[i],in30[i],in29[i],in28[i],in27[i],in26[i],in25[i],in24[i],in23[i],in22[i],in21[i],in20[i],in19[i],in18[i],in17[i],in16[i],in15[i],in14[i],in13[i],in12[i],in11[i],in10[i],in9[i],in8[i],in7[i],in6[i],in5[i],in4[i],in3[i],in2[i],in1[i],in0[i]};
 end
 //Add the implementation of giving in the array values
@@ -196,9 +196,9 @@ wire a1,a2;
 always @(posedge clk)
     begin
     if(reset)
-        q <= 0;
+        q = 0;
     if(WriteEn)
-        q <= d;
+        q = d;
       
     end
     
@@ -256,6 +256,7 @@ input[4:0] WriteRegister;
 input ShouldWrite;
 input[31:0] decodedOutput;
 wire[31:0] temp;
+
 decode5to32 da(WriteRegister,temp);
 
 assign decodedOutput[0] = 0;
