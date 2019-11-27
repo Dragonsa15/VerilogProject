@@ -134,6 +134,11 @@ input[31:0] in0,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13,in14,in1
 reg[31:0] BitWiseArray [0:31];
 integer i;
 
+always @(*)
+begin
+for(i=0;i<31;i++)
+BitWiseArray[i] = {in31[i],in30[i],in29[i],in28[i],in27[i],in26[i],in25[i],in24[i],in23[i],in22[i],in21[i],in20[i],in19[i],in18[i],in17[i],in16[i],in15[i],in14[i],in13[i],in12[i],in11[i],in10[i],in9[i],in8[i],in7[i],in6[i],in5[i],in4[i],in3[i],in2[i],in1[i],in0[i]};
+end
 //Add the implementation of giving in the array values
 
 mux32x1 mux0(OutputData[0],BitWiseArray[0],ReadRegister);
@@ -253,7 +258,8 @@ input[31:0] decodedOutput;
 wire[31:0] temp;
 decode5to32 da(WriteRegister,temp);
 
-and and0(decodedOutput[0],temp[0],ShouldWrite);
+assign decodedOutput[0] = 0;
+//and and0(decodedOutput[0],temp[0],ShouldWrite);
 and and1(decodedOutput[1],temp[1],ShouldWrite);
 and and2(decodedOutput[2],temp[2],ShouldWrite);
 and and3(decodedOutput[3],temp[3],ShouldWrite);
@@ -353,14 +359,14 @@ andfor5 andn(out[1],not1,not2,not3,not4,Registerindex[0]);
 andfor5 andm(out[0],not1,not2,not3,not4,not5);
 
 endmodule
-/*
+
 module test();
-    wire OutputData1;
-    wire OutputData2;
-    wire WriteBackData;
-    reg ReadRegister1;
-    reg ReadRegister2;
-    reg WriteRegister;
+    wire[31:0] OutputData1;
+    wire[31:0] OutputData2;
+    reg[31:0] WriteBackData;
+    reg[4:0] ReadRegister1;
+    reg[4:0] ReadRegister2;
+    reg[4:0] WriteRegister;
     reg RegWriteEnable;
     reg clk;
     reg reset;
@@ -368,11 +374,29 @@ module test();
     
     
     initial begin
+    $dumpfile ("Registers_out.vcd");
+	$dumpvars(0, test);
+
     clk = 0;
     reset = 0;
-    
+    ReadRegister1 = 5'b0000;
+    ReadRegister2 = 5'b0000;
+    RegWriteEnable = 0;
+
+
+    #20
+    RegWriteEnable = 1;
+    WriteRegister = 5'b0001;
+    WriteBackData = 32'b00000000000000000000000000100001;
+    ReadRegister1 = 5'b0000;
+    ReadRegister2 = 5'b0000;
+
+    #20;
+    ReadRegister1 = 5'b0001;
+    ReadRegister2 = 5'b0000;
+    RegWriteEnable = 0;
+
     end
     always
         #10 clk = ~clk;
 endmodule
-*/
