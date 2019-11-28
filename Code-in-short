@@ -1,0 +1,28 @@
+
+INSTRUCTION MODULE
+So I first created an instruction memory module which takes instructions from 
+an instruction.txt file and it outputes an instruction for a particular address
+
+REGISTER MODULE
+
+This module took most time till now as it has 2 parts to it writing back and reading.
+For writing back We decoded our WRiteRegister index to a 32 bit array where only at the 
+WriteRegisterindex there is a "1".After we got this decoded ouput we saw if our writeenable
+is on and if it is then we sent this decoded output into all the registers and where everything turns
+out to be one i.e. the decodedoutputbit and writeenable then this register gets overwritten with the 
+writebackData.
+
+Now for reading from the register,i first created another array which stores the first bit of all the 
+register then the 2nd bit ,then the 3rd bit and so on,and I chose which bit I want from these via again 
+decoding the ReadRegister and chosing a specific bit if comparing it with the decoded output there is a 
+one.
+
+ALU
+
+Simply said if opcode = 00 then add A + B
+            if opcode = 10 then     A - b
+            if opcode = 01 then xor A , B
+
+DataMemory 
+
+Same as instruction Memory
