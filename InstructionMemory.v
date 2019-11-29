@@ -1,7 +1,6 @@
 module InstructionMemory(instruction,address);
     input[31:0] address;
-    output[31:0] instruction;
-    reg[31:0] instruction;
+    output reg[31:0] instruction;
     reg[31:0] instrMem[999:0];
 
     always @(address)
