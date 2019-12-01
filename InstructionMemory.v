@@ -15,6 +15,7 @@ module InstructionMemory(instruction,address);
     
 endmodule
 
+/*
 module InstrSimulation;
 
 reg[31:0] addr;
@@ -31,3 +32,4 @@ $finish;
 end
 
 endmodule
+*/

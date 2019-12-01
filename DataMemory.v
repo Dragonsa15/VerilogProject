@@ -5,7 +5,10 @@ input[31:0]WriteData,address;
 output reg [31:0] ReadData;
 input WriteEnable;
 input clk;
-
+initial 
+    begin
+        $readmemb("datamem.txt",DataSystem);
+    end
 always @(posedge clk)
 begin
     if(WriteEnable)
@@ -14,6 +17,7 @@ begin
         DataSystem[address+1] = WriteData[23:16];
         DataSystem[address+2] = WriteData[15:8];
         DataSystem[address+3] = WriteData[7:0];
+        $writememb("datamem.txt", DataSystem);
     end
 end
 
@@ -24,6 +28,7 @@ end
 
 endmodule
 
+/*
 module test();
 reg[31:0]WriteData,address;
 wire [31:0] ReadData;
@@ -54,3 +59,4 @@ end
 always
     #20 clk = ~clk;
 endmodule
+*/
