@@ -48,7 +48,7 @@ You nned to do this check before running so you know no module is becoming fault
 You can create specific testcases and tell me if its failing for any of them as well.
 
 ```
-iverilog instructions.v
+iverilog ALU.v
 ```
 
 ## Deployment
@@ -63,7 +63,7 @@ Add additional notes about how to deploy this on a live system
 
 1. [Saksham Agarwal](https://github.com/Dragonsa15)
 2. [Utkarsh Agarwal](https://github.com/woolllff)
-3. [Sowmith Nandan](https://github.com/sowmith_nandan)
+3. [Sowmith Nandan](https://github.com/sowmithnandan)
 
 ## Acknowledgments
 
