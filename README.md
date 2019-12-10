@@ -4,12 +4,13 @@ This is a pipelined mips processor created in Verilog
 
 ## Getting Started
 
-1. Download iverilog for the program to run on your computer. 
-2. Run all the files in terminal as iverilog *.v and see the gtkwave for the results. 
+Run all the files in terminal as iverilog *.v and see the gtkwave for the results.
+Here the output will be shown in terms of waves in gtkwave telling which signal is on and at what state.
+In this README.md I have given the instructions for Linux and Windows will put in later.
 
 ### Prerequisites
 
-The only prerequisite required is iverilog.
+The only prerequisite required is **iverilog** and **gtkwave**.
 
 ```
 Give examples
@@ -21,17 +22,20 @@ A step by step series of examples that tell you how to get a development env run
 
 Say what the step will be
 
-```
-Give the example
-```
-
-And repeat
+1. Download iverilog for the program to run on your computer via the following method. 
 
 ```
-until finished
+ sudo add-apt-repository ppa:team-electronics/ppa
+ sudo apt-get update
+ sudo apt-get install iverilog
+```
+2. Then See if you have gtkwave or not and to download it use the following Linux commands
+```
+ sudo apt-get install gtkwave
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+check out this page for more Help!
+http://inf-server.inf.uth.gr/~konstadel/resources/Icarus_Verilog_GTKWave_guide.pdf.
 
 ## Running the tests
 
