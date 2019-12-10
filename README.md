@@ -39,22 +39,16 @@ http://inf-server.inf.uth.gr/~konstadel/resources/Icarus_Verilog_GTKWave_guide.p
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+You can check if each module is running or not via the testbench in each module.
+So running them individually will work.
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+You nned to do this check before running so you know no module is becoming faulty for you.
+You can create specific testcases and tell me if its failing for any of them as well.
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+iverilog instructions.v
 ```
 
 ## Deployment
@@ -63,30 +57,17 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Iverilog](http://iverilog.icarus.com/) - The coding language used
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+1. [Saksham Agarwal](https://github.com/Dragonsa15)
+2. [Utkarsh Agarwal](https://github.com/woolllff)
+3. [Sowmith Nandan](https://github.com/sowmith_nandan)
 
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
+Nandita Rao
 * Inspiration
-* etc
+Project for Computer Architecture
