@@ -67,7 +67,4 @@ Add additional notes about how to deploy this on a live system
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-Nandita Rao
-* Inspiration
-Project for Computer Architecture
+* Nandita Rao Mam(as she was the one who gave this to us as a project)
