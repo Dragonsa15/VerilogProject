@@ -4,8 +4,8 @@ This is a pipelined mips processor created in Verilog
 
 ## Getting Started
 
-Download iverilog for the program to run on your computer.
-Run all the files in terminal as iverilog *.v and see the gtkwave for the results.
+1. Download iverilog for the program to run on your computer. #
+2. Run all the files in terminal as iverilog *.v and see the gtkwave for the results. #
 
 ### Prerequisites
 
