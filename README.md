@@ -1,15 +1,15 @@
-# Project Title
+# MIPS PROCESSOR
 
 This is a pipelined mips processor created in Verilog
 
 ## Getting Started
 
-1. Download iverilog for the program to run on your computer. #
-2. Run all the files in terminal as iverilog *.v and see the gtkwave for the results. #
+1. Download iverilog for the program to run on your computer. 
+2. Run all the files in terminal as iverilog *.v and see the gtkwave for the results. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+The only prerequisite required is iverilog.
 
 ```
 Give examples
